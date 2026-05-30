@@ -1,0 +1,17 @@
+name: super_cache_example
+description: Demonstrates all major features of the super_cache package.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  super_cache:
+    path: ../
+
+flutter:
+  uses-material-design: true

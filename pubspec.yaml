@@ -1,0 +1,30 @@
+name: super_cache
+description: >
+  A high-performance pure Dart cache with L1 memory + L2 disk layers, offering fast access, adaptive ARC eviction, TTL support, AES-256-GCM encryption, isolate safety, and zero native dependencies.
+
+version: 1.0.0
+homepage: https://github.com/Brah-Timo/super_cache
+repository: https://github.com/Brah-Timo/super_cache
+issue_tracker: https://github.com/Brah-Timo/super_cache/issues
+
+topics:
+  - cache
+  - caching
+  - performance
+  - memory-cache
+  - disk-cache
+  
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  meta: ^1.9.0
+  path: ^1.9.0
+  crypto: ^3.0.3
+  pointycastle: ^3.7.3
+
+dev_dependencies:
+  test: ^1.24.0
+  benchmark_harness: ^2.2.0
+  lints: ^3.0.0
+  mockito: ^5.4.0
