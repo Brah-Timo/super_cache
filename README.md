@@ -1,6 +1,6 @@
-# ⚡ super_cache
+# ⚡ quantum_cache
 
-[![pub version](https://img.shields.io/badge/pub-v1.0.0-blue)](https://pub.dev/packages/super_cache)
+[![pub version](https://img.shields.io/badge/pub-v1.0.0-blue)](https://pub.dev/packages/quantum_cache)
 [![Dart SDK](https://img.shields.io/badge/dart-%3E%3D3.0.0-blue)](https://dart.dev)
 [![Flutter](https://img.shields.io/badge/flutter-%3E%3D3.10.0-blue)](https://flutter.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
@@ -12,9 +12,9 @@
 
 ---
 
-## Why super_cache?
+## Why quantum_cache?
 
-| Feature | super_cache | Hive v4 | shared_preferences |
+| Feature | quantum_cache | Hive v4 | shared_preferences |
 |---|:---:|:---:|:---:|
 | L1 in-memory layer | ✅ | ❌ | ❌ |
 | O(1) disk reads via B-Index | ✅ | ❌ | ❌ |
@@ -31,11 +31,18 @@
 
 ---
 
+
+<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/18ca3aa0-96fc-49a1-bbd0-d2f190ab6224" />
+
+
+
+
+
 ## Performance
 
 Measured on a mid-range device (Pixel 7 / iPhone 14):
 
-| Operation | super_cache | Hive (approx.) | Speedup |
+| Operation | quantum_cache | Hive (approx.) | Speedup |
 |---|---|---|---|
 | L1 read (warm hit) | **~0.001 ms** | ~0.05 ms | **50×** |
 | L2 read (disk hit) | **~0.2 ms** | ~2.0 ms | **10×** |
@@ -82,7 +89,7 @@ Measured on a mid-range device (Pixel 7 / iPhone 14):
 
 ```yaml
 dependencies:
-  super_cache: ^1.0.0
+  quantum_cache: ^1.0.0
 ```
 
 ---
@@ -90,7 +97,7 @@ dependencies:
 ## Quick Start
 
 ```dart
-import 'package:super_cache/super_cache.dart';
+import 'package:quantum_cache/quantum_cache.dart';
 
 Future<void> main() async {
   // 1 — Register custom adapters BEFORE init
@@ -157,7 +164,7 @@ class UserModel {
 }
 
 // 2a — Auto-generate adapter (recommended):
-//   dart run super_cache:super_cache_builder lib/models
+//   dart run quantum_cache:quantum_cache_builder lib/models
 
 // 2b — Or write the adapter manually:
 class UserAdapter extends SuperCacheAdapter<UserModel> {
@@ -255,7 +262,7 @@ const CacheConfig(
   enableDiskCache:     true,         // Set false for RAM-only
   maxDiskSizeBytes:    500 * 1024 * 1024, // Max disk (500 MB)
   diskDirectory:       null,         // Defaults to app documents
-  boxName:             'super_cache_default',
+  boxName:             'quantum_cache_default',
 
   // ── TTL ──────────────────────────────────────────────────
   defaultTtl:          null,         // null = never expires
@@ -312,7 +319,7 @@ await analytics.track(snap.toMap());
 ## Testing with Mocks
 
 ```dart
-import 'package:super_cache/super_cache.dart';
+import 'package:quantum_cache/quantum_cache.dart';
 
 class MockCache implements SuperCacheBase {
   final _store = <String, dynamic>{};
@@ -331,3 +338,4 @@ class MockCache implements SuperCacheBase {
 ## License
 
 MIT © 2026 — see [LICENSE](LICENSE).
+
